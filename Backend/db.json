@@ -523,7 +523,18 @@
       ]
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": "4e2b",
+      "menuItemId": "2",
+      "quantity": 1
+    },
+    {
+      "id": "797a",
+      "menuItemId": "6",
+      "quantity": 1
+    }
+  ],
   "restaurants": [
     {
       "id": "1",
