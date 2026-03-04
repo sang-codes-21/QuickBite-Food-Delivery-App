@@ -1,5 +1,5 @@
 const LOCAL_BASE = "http://localhost:3001";
-const RENDER_BASE = "https://quickbite-fooddeliveryapp.onrender.com";
+const RENDER_BASE = "https://quickbite-food-delivery-app.onrender.com/";
 
 const API_BASE_URL =
   window.location.hostname === "localhost" ? LOCAL_BASE : RENDER_BASE;
@@ -14,6 +14,7 @@ export const getMenuItems = async () => {
     console.error("Error fetching menu items:", error);
     throw error;
   }
+  how;
 };
 
 // Fetch cart items
@@ -27,7 +28,7 @@ export const getCartItems = async () => {
     const menuItems = await getMenuItems();
     return cartItems.map((cartItem) => {
       const menuItem = menuItems.find(
-        (item) => item.id === cartItem.menuItemId
+        (item) => item.id === cartItem.menuItemId,
       );
       return {
         ...cartItem,
