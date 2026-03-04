@@ -9,7 +9,6 @@ export const getMenuItems = async () => {
     console.error("Error fetching menu items:", error);
     throw error;
   }
-  how;
 };
 
 // Fetch cart items
