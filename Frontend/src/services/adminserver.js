@@ -1,9 +1,4 @@
-const LOCAL_BASE = "http://localhost:3001";
-const RENDER_BASE = "https://quickbite-food-delivery-app.onrender.com";
-
-const API_BASE_URL =
-  window.location.hostname === "localhost" ? LOCAL_BASE : RENDER_BASE;
-
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
 // Fetch all menu items
 export const getMenuItems = async () => {
   try {
@@ -14,6 +9,7 @@ export const getMenuItems = async () => {
     console.error("Error fetching menu items:", error);
     throw error;
   }
+  how;
 };
 
 // Fetch cart items

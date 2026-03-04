@@ -3,7 +3,7 @@ import { Search } from "lucide-react";
 import SideBar from "../components/adminPanel/SideBar.jsx";
 import Stats from "../components/adminPanel/Stats";
 import RecentOrders from "../components/adminPanel/RecentOrders";
-import TodaysActivity from "../components/adminPanel/TodaysActivity";
+//import TodaysActivity from "../components/adminPanel/TodaysActivity";
 
 const Admin = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -32,7 +32,7 @@ const Admin = () => {
           isOpen ? "ml-64" : "ml-20"
         } p-4 md:p-6`}
       >
-        <div id="dashboard" className="mb-4 md:mb-6">
+        <div className="mb-4 md:mb-6">
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
             Dashboard
           </h1>
@@ -54,13 +54,10 @@ const Admin = () => {
           </div>
         </div>
 
-        <div id="stats">
-          <Stats />
-        </div>
+        <Stats />
 
-        <div id="orders" className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6">
           <RecentOrders searchQuery={searchQuery} />
-          <TodaysActivity />
         </div>
       </div>
     </div>
