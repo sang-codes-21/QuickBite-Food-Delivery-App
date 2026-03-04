@@ -1,5 +1,5 @@
 const LOCAL_BASE = "http://localhost:3001";
-const RENDER_BASE = "https://quickbite-food-delivery-app.onrender.com/";
+const RENDER_BASE = "https://quickbite-food-delivery-app.onrender.com";
 
 const API_BASE_URL =
   window.location.hostname === "localhost" ? LOCAL_BASE : RENDER_BASE;
