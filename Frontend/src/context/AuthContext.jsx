@@ -53,6 +53,14 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
   }, []);
 
+  const updateUser = useCallback((updatedData) => {
+    setUser((prev) => {
+      const merged = { ...prev, ...updatedData };
+      localStorage.setItem("quickbite_user", JSON.stringify(merged));
+      return merged;
+    });
+  }, []);
+
   const openLogin = useCallback(() => {
     setIsLoginOpen(true);
   }, []);
@@ -68,6 +76,7 @@ export const AuthProvider = ({ children }) => {
         isLoggedIn: !!user,
         login,
         logout,
+        updateUser,
         isLoginOpen,
         openLogin,
         closeLogin,

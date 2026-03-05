@@ -3,6 +3,7 @@ import Tag from "../components/constant/TextFormat.jsx";
 import TopPart from "../components/layout/TopPart.jsx";
 import { FetchFavorites, RemoveFromFav } from "../services/ServerAPI.js";
 import { useAuth } from "../context/AuthContext.jsx";
+import { Heart } from "lucide-react";
 
 const FavouritePage = () => {
   const { user } = useAuth();
@@ -47,8 +48,8 @@ const FavouritePage = () => {
             <p className="text-gray-500">Loading your favorites...</p>
           ) : favItems.length === 0 ? (
             <div className="bg-white/95 rounded-2xl border border-gray-100 shadow-sm p-8 flex flex-col items-center justify-center text-center gap-3">
-              <div className="h-12 w-12 rounded-full bg-red-50 text-red-500 flex items-center justify-center text-2xl">
-                ❤️
+              <div className="h-12 w-12 rounded-full bg-red-50 text-red-500 flex items-center justify-center">
+                <Heart size={24} fill="currentColor" />
               </div>
               <Tag as="h2" className="text-lg font-semibold text-gray-900 mt-1">
                 Your wishlist is empty

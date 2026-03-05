@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 import AddToCart from "../common/AddToCart.jsx";
 import { useAuth } from "../../context/AuthContext.jsx";
 import LoginPage from "../../pages/LoginPage.jsx";
+import { Heart } from "lucide-react";
 
 const MostPopularSection = ({
   foods,

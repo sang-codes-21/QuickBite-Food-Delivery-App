@@ -76,7 +76,6 @@ const Header = ({ cartCount = 0, favCount = 0 }) => {
                 >
                   Favourites
                 </TextFormat>
-                {favCount > 0 && <span className="absolute -right-1">❤️</span>}
               </Link>
 
               {/* Profile / Login */}
